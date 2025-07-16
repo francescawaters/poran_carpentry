@@ -1,0 +1,183 @@
+/* Google fonts import */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Exa:wght@100..900&family=Oswald:wght@200..700&family=Poiret+One&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* * wildcard selector is used to override defult styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*General Styles*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic Project Styles*/
+    color: #3a3a3a;
+    font-family: 'Lexend Exa', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poiret One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+hr {
+    margin: 5px 0;
+    border-top: 1px solid #3a3a3a;
+}
+
+.hidden-heading {
+    display: none;
+}
+
+/*Header*/
+header {
+    background-color: #2a2a2a;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    border-bottom: 1px solid goldenrod;
+}
+
+#logo {
+    color: goldenrod;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+/*navbar styles with drop down toggle*/
+nav {
+    position: absolute;
+    background-color: #2a2a2a;
+    width: 100%;
+    left: 0;
+    padding: 0 1em;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/*Nav Toggle*/
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+/*Main Content*/
+main {
+    /*Make main content to take up any surplus space to push footer down*/
+    flex: 1 0 auto;
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero section*/
+#hero {
+    height: 400px;
+    width: 100%;
+    background: url("../images/hero.jpg") no-repeat center center/cover scroll;
+    position: relative;
+    
+}
+
+#cover-text {
+    position: absolute;
+    bottom: 30px;
+    width: 60%;
+
+}
+
+
+/* Media Query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main Content */
+    main {
+        margin-top: 79px;
+    }
+
+    #hero {
+        height: 500px;
+    }
+
+    /* Hero */
+    #cover-text {
+        width: 30%;
+        right: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* Hero */
+    #hero {
+        height: 600px;
+    }
+
+    #cover-text {
+        width: 20%;
+    }
+    
+}

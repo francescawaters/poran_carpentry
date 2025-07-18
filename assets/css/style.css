@@ -17,6 +17,7 @@ body {
     /* Generic Project Styles*/
     color: #3a3a3a;
     font-family: 'Lexend Exa', sans-serif;
+    background-color: #f5f5f5;
 }
 
 h1,
@@ -28,13 +29,18 @@ h3 {
     color: #252525;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
 hr {
     margin: 5px 0;
     border-top: 1px solid #3a3a3a;
 }
 
-.hidden-heading {
-    display: none;
+section {
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
 /*Header*/
@@ -122,6 +128,18 @@ main {
 
 }
 
+@media screen and (min-width: 1024px) {
+
+    /* Hero */
+    #hero {
+        height: 600px;
+    }
+
+    #cover-text {
+        width: 20%;
+    }
+    
+}
 
 /* Media Query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -169,15 +187,30 @@ main {
     }
 }
 
-@media screen and (min-width: 1024px) {
+/* Gallery Section */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
 
-    /* Hero */
-    #hero {
-        height: 600px;
-    }
+#photos {
+    line-height: 0;
+}
 
-    #cover-text {
-        width: 20%;
+@media screen and (min-width: 567px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
     }
-    
+}
+
+
+
+/* Media Query: laptops and larger (992px and up) */
+@media screen and (min-width: 992px) {
+
+    /* Gallery*/
+    #photos {
+        column-count: 4;
+    }
 }

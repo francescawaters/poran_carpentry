@@ -62,8 +62,9 @@ header a {
     color: #fff;
 }
 
-.active {
-    border-bottom: 1px solid goldenrod;
+header a:hover {
+    color:  goldenrod;
+    transition: 0.3s ease-in-out;
 }
 
 #logo {
